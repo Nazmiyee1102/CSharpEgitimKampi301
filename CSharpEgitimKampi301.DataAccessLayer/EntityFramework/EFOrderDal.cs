@@ -11,5 +11,6 @@ namespace CSharpEgitimKampi301.DataAccessLayer.EntityFramework
 {
     public class EFOrderDal : GenericRepository<Order>, IOrderDal
     {
+        
     }
 }
