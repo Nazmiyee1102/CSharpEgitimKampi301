@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CSharpEgitimKampi301.EFProject
+namespace CSharpEgitimKampi301EFProject
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace CSharpEgitimKampi301.EFProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmStatistics());
+            Application.Run(new Form1());
         }
     }
 }

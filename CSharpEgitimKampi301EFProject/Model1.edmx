@@ -15,6 +15,14 @@
           <Property Name="version" Type="int" />
           <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
+        <EntityType Name="TblAdmin">
+          <Key>
+            <PropertyRef Name="AdminId" />
+          </Key>
+          <Property Name="AdminId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+        </EntityType>
         <EntityType Name="TblCustomer">
           <Key>
             <PropertyRef Name="CustomerId" />
@@ -22,6 +30,7 @@
           <Property Name="CustomerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CustomerName" Type="nvarchar" MaxLength="50" />
           <Property Name="CustomerSurname" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustomerBalance" Type="decimal" Precision="18" Scale="2" />
         </EntityType>
         <EntityType Name="TblGuide">
           <Key>
@@ -57,6 +66,7 @@
         </Association>
         <EntityContainer Name="EgitimKampiEFTravelDbModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblCustomer" EntityType="Self.TblCustomer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblGuide" EntityType="Self.TblGuide" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblLocation" EntityType="Self.TblLocation" Schema="dbo" store:Type="Tables" />
@@ -80,6 +90,14 @@
           <Property Name="version" Type="Int32" />
           <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
+        <EntityType Name="TblAdmin">
+          <Key>
+            <PropertyRef Name="AdminId" />
+          </Key>
+          <Property Name="AdminId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
         <EntityType Name="TblCustomer">
           <Key>
             <PropertyRef Name="CustomerId" />
@@ -87,6 +105,7 @@
           <Property Name="CustomerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CustomerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="CustomerSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CustomerBalance" Type="Decimal" Precision="18" Scale="2" />
         </EntityType>
         <EntityType Name="TblGuide">
           <Key>
@@ -122,8 +141,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="EgitimKampiEFTravelDbEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="EgitimKampiEFTravelDbEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" />
           <EntitySet Name="TblCustomer" EntityType="Self.TblCustomer" />
           <EntitySet Name="TblGuide" EntityType="Self.TblGuide" />
           <EntitySet Name="TblLocation" EntityType="Self.TblLocation" />
@@ -137,7 +157,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="EgitimKampiEFTravelDbModelStoreContainer" CdmEntityContainer="EgitimKampiEFTravelDbEntities1">
+        <EntityContainerMapping StorageEntityContainer="EgitimKampiEFTravelDbModelStoreContainer" CdmEntityContainer="EgitimKampiEFTravelDbEntities">
           <EntitySetMapping Name="sysdiagrams">
             <EntityTypeMapping TypeName="EgitimKampiEFTravelDbModel.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
@@ -149,12 +169,22 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="TblAdmin">
+            <EntityTypeMapping TypeName="EgitimKampiEFTravelDbModel.TblAdmin">
+              <MappingFragment StoreEntitySet="TblAdmin">
+                <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TblCustomer">
             <EntityTypeMapping TypeName="EgitimKampiEFTravelDbModel.TblCustomer">
               <MappingFragment StoreEntitySet="TblCustomer">
                 <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
                 <ScalarProperty Name="CustomerName" ColumnName="CustomerName" />
                 <ScalarProperty Name="CustomerSurname" ColumnName="CustomerSurname" />
+                <ScalarProperty Name="CustomerBalance" ColumnName="CustomerBalance" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

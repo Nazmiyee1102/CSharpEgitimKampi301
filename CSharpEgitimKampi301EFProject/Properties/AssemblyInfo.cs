@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CSharpEgitimKampi301.EFProject")]
+[assembly: AssemblyTitle("CSharpEgitimKampi301EFProject")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CSharpEgitimKampi301.EFProject")]
+[assembly: AssemblyProduct("CSharpEgitimKampi301EFProject")]
 [assembly: AssemblyCopyright("Copyright ©  2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("ef99604c-6a24-4137-9255-cf27898b3a68")]
+[assembly: Guid("278d5ed5-87d7-49f2-9490-7d5a4f3c1b46")]
 
 // Version information for an assembly consists of the following four values:
 //

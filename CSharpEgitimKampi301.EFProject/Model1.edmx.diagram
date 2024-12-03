@@ -4,9 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0c850db0469d4269be126b6af7ebcbfd" Name="Diagram1">
+      <Diagram DiagramId="c788abc145554f68bb32fc0a48c21313" Name="Diagram1">
         <EntityTypeShape EntityType="EgitimKampiEFTravelDbModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="EgitimKampiEFTravelDbModel.TblCustomer" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EgitimKampiEFTravelDbModel.TblAdmin" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EgitimKampiEFTravelDbModel.TblCustomer" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="EgitimKampiEFTravelDbModel.TblGuide" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="EgitimKampiEFTravelDbModel.TblLocation" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="EgitimKampiEFTravelDbModel.FK_TblLocation_TblGuide" ManuallyRouted="false" />
