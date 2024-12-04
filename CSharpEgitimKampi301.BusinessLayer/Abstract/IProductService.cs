@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharpEgitimKampi301.DataAccessLayer.Abstract
+namespace CSharpEgitimKampi301.BusinessLayer.Abstract
 {
-    public interface ICustomerDal : IGenericDal<Customer>
+    public interface IProductService : IGenericService<Product>
     {
     }
 }
