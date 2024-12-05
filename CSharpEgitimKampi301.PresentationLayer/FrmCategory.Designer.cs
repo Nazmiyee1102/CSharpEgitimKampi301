@@ -71,6 +71,7 @@
             this.btn_listele.TabIndex = 2;
             this.btn_listele.Text = "Listele";
             this.btn_listele.UseVisualStyleBackColor = true;
+            this.btn_listele.Click += new System.EventHandler(this.btn_listele_Click);
             // 
             // dataGridView1
             // 
@@ -141,6 +142,7 @@
             this.btn_ekle.TabIndex = 2;
             this.btn_ekle.Text = "Ekle";
             this.btn_ekle.UseVisualStyleBackColor = true;
+            this.btn_ekle.Click += new System.EventHandler(this.btn_ekle_Click);
             // 
             // btn_sil
             // 
@@ -151,6 +153,7 @@
             this.btn_sil.TabIndex = 2;
             this.btn_sil.Text = "Sil";
             this.btn_sil.UseVisualStyleBackColor = true;
+            this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
             // 
             // btn_guncelle
             // 
@@ -161,6 +164,7 @@
             this.btn_guncelle.TabIndex = 2;
             this.btn_guncelle.Text = "Güncelle";
             this.btn_guncelle.UseVisualStyleBackColor = true;
+            this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click);
             // 
             // btn_getir
             // 
@@ -171,6 +175,7 @@
             this.btn_getir.TabIndex = 2;
             this.btn_getir.Text = "ID\' ye Göre Getir";
             this.btn_getir.UseVisualStyleBackColor = true;
+            this.btn_getir.Click += new System.EventHandler(this.btn_getir_Click);
             // 
             // FrmCategory
             // 

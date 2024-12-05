@@ -40,7 +40,7 @@ namespace CSharpEgitimKampi301.BusinessLayer.Concrete
 
         public void TUpdate(Order entity)
         {
-            if (entity.ProductId != 0)
+            if (entity.OrderId != 0)
             {
                 _orderDal.Update(entity);
             }
