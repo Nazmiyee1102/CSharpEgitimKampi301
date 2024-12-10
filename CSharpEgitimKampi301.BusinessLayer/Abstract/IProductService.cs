@@ -9,5 +9,6 @@ namespace CSharpEgitimKampi301.BusinessLayer.Abstract
 {
     public interface IProductService : IGenericService<Product>
     {
+        List<object> GetProductsWithCategory();
     }
 }
