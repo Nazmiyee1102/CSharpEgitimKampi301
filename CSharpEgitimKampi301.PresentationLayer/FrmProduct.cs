@@ -34,7 +34,14 @@ namespace CSharpEgitimKampi301.PresentationLayer
 
         private void btn_ekle_Click(object sender, EventArgs e)
         {
-           
+            Product product = new Product();
+            product.CategoryId = int.Parse(comboBox1.SelectedValue.ToString());
+            product.Price = decimal.Parse(txt_Price.Text);
+            product.ProductName = txt_productName.Text;
+            product.Description = txt_description.Text;
+            product.Stock = int.Parse(txt_Stock.Text);
+            _productService.TInsert(product);
+            MessageBox.Show("Ekleme İşlemi Yapıldı.");
         }
 
         private void btn_list2_Click(object sender, EventArgs e)
@@ -49,6 +56,35 @@ namespace CSharpEgitimKampi301.PresentationLayer
             var deletedValues = _productService.TGetById(id);
             _productService.TDelete(deletedValues);
             MessageBox.Show("Silme Başarılı");
+        }
+
+        private void btn_getir_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txt_id.Text);
+            var value = _productService.TGetById(id);
+            dataGridView1.DataSource = new List<object> { value };
+
+        }
+
+        private void btn_guncelle_Click(object sender, EventArgs e)
+        {
+            int id = int.Parse(txt_id.Text);
+            var value = _productService.TGetById(id);
+            value.CategoryId = int.Parse(comboBox1.SelectedValue.ToString());
+            value.Description = txt_description.Text;
+            value.Price = decimal.Parse(txt_Price.Text);
+            value.Stock = int.Parse(txt_Stock.Text);
+            value.ProductName = txt_productName.Text;
+            _productService.TUpdate(value);
+            MessageBox.Show("Güncelleme İşlemi Başarılı!");
+        }
+
+        private void FrmProduct_Load(object sender, EventArgs e)
+        {
+            var values = _categoryService.TGetAll();
+            comboBox1.DataSource = values;
+            comboBox1.DisplayMember = "CategoryName";
+            comboBox1.ValueMember = "CategoryId";
         }
     }
 }

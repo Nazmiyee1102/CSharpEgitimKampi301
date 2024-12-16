@@ -66,10 +66,11 @@
             this.btn_getir.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold);
             this.btn_getir.Location = new System.Drawing.Point(191, 548);
             this.btn_getir.Name = "btn_getir";
-            this.btn_getir.Size = new System.Drawing.Size(172, 35);
+            this.btn_getir.Size = new System.Drawing.Size(172, 100);
             this.btn_getir.TabIndex = 11;
             this.btn_getir.Text = "ID\' ye Göre Getir";
             this.btn_getir.UseVisualStyleBackColor = false;
+            this.btn_getir.Click += new System.EventHandler(this.btn_getir_Click);
             // 
             // btn_guncelle
             // 
@@ -81,6 +82,7 @@
             this.btn_guncelle.TabIndex = 12;
             this.btn_guncelle.Text = "Güncelle";
             this.btn_guncelle.UseVisualStyleBackColor = false;
+            this.btn_guncelle.Click += new System.EventHandler(this.btn_guncelle_Click);
             // 
             // btn_sil
             // 
@@ -274,6 +276,7 @@
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "FrmProduct";
             this.Text = "FrmProduct";
+            this.Load += new System.EventHandler(this.FrmProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
